@@ -4,11 +4,11 @@
 
  - Potete scaricare [quì](https://github.com/fcole90/CSMN/releases) le release.
 
-##Requisiti:
+##Requisiti per sviluppatori:
 
  - Html: basta installare pandoc ` sudo apt-get install pandoc `
  - PDF: installare pandoc, latex ed i font necessari: 
-` sudo apt-get install --install-recommended pandoc texlive-latex-base texlive-fonts-recommended cm-superminimal`
+` sudo apt-get install --install-recommended pandoc texlive-latex-base texlive-fonts-recommended cm-super-minimal`
 
 Licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 ##EULA
