@@ -154,85 +154,195 @@ esistono particolari vettori tali che *F(v) = $\lambda$v*. Chiamiamo $\lambda$ a
 autovettore associato a tale autovalore. Si definisce autospazio relativo all'autovalore l'insieme dei vettori
 generati generati da tale autovalore.
  
-$\iffalse$
-21. Cosa è il raggio spettrale di una matrice.
-22. Come si definisce la norma in uno spazio lineare.
-23. Dai tre esempi di norme definite in $\mathbb{R}$^n^ , lo spazio di tutte le n-ple di numeri reali.
-24. Cosa è la disuguaglianza triangolare in uno spazio lineare normato. Vale sempre?
-25. Come si può definire la distanza tra due elementi di uno spazio lineare normato.
-26. Considera lo spazio $\mathbb{R}$^2^ . Indica graficamente la sfera unitaria S= $\mathbb{R}$^2^ | ||x||<=1
+
+**21. Cosa è il raggio spettrale di una matrice?**
+
+ - Il raggio spettrale di una matrice è definito come il suo più grande autovalore.
+
+
+**22. Come si definisce la norma in uno spazio lineare?**
+
+ - Definito il prodotto scalare sugli spazi lineari, si definisce la norma
+ come *$\sqrt{(x, x)}$ = $\|x\|$*.
+
+
+**23. Dai tre esempi di norme definite in $\mathbb{R}$^n^ , lo spazio di tutte le n-ple di numeri reali.**
+
+ - Norma del massimo
+ - Norma di Manhattan
+ - Norma euclidea
+
+
+**24. Cosa è la disuguaglianza triangolare in uno spazio lineare normato. Vale sempre?**
+
+ - Vale in tutti gli spazi dotati di norma, essendo una proprietà della norma stessa.
+ - $\|x+y\| \le \|x\|+\|y\|$
+
+
+ 
+**25. Come si può definire la distanza tra due elementi di uno spazio lineare normato.**
+
+ - *d(f, g) = $\left(\int |f(x) - g(x)|^p dx\right)^\frac{1}{p}$*
+
+
+**26. Considera lo spazio $\mathbb{R}$^2^. Indica graficamente la sfera unitaria S= $\mathbb{R}$^2^ $\|x\|\le1$
 considerando la distanza relativa alla norma euclidea, la norma di Manhattan e la
-norma del massimo.
-27. Cosa significa dire che una norma è submoltiplicativa.
-28. Come si definisce una norma matriciale.
-29. Date le 2 matrici 3x3
-1 1 2 3 
- 2 3 4 
- 4 5 6 
- 0 1 2 
+norma del massimo.**
+ 
+ - Norme di Manhattan, euclidea e del massimo.
+ ![Norme di Manhattan, euclidea e del massimo.](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Vector_norms.svg/140px-Vector_norms.svg.png)
 
 
 
+**27. Cosa significa dire che una norma è submoltiplicativa.**
 
-  7 8 9  
-  5 6 7  
-calcola la loro distanza secondo la norma del massimo || || .
-30. Date le 2 matrici 3x3
- 1 2 3 
- 2 3 4 
- 4 5 6 
- 0 1 2 
+ - $\|AB\| \le \|A\| \|B\|$
 
 
+**28. Come si definisce una norma matriciale.**
+
+ - La norma matriciale gode delle stesse proprietà della norma, a cui si aggiunge
+ la proprietà di submoltiplatività.
+
+**29. Date le 2 matrici $3\times3$
+$\left( \begin{array}{ccc} 
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \end{array} \right)$
+e
+$\left( \begin{array}{ccc} 
+2 & 3 & 4 \\
+0 & 1 & 2 \\
+5 & 6 & 7 \end{array} \right)$
+calcola la loro distanza secondo la norma del massimo $\|.\|_\infty$.**
+
+ - La norma del massimo per matrici si calcola come la massima somma degli elementi
+ (presi in valore assoluto) di una riga.
+ - La distanza si calcola con la norma della differenza, quindi:
+ - $\left( \begin{array}{ccc} 
+-1 & -1 & -1 \\
+4 & 4 & 4 \\
+2 & 2 & 2 \end{array} \right)$
+ - Quindi la soluzione è *12*.
+
+**30. Date le 2 matrici $3\times3$
+$\left( \begin{array}{ccc} 
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \end{array} \right)$
+e
+$\left( \begin{array}{ccc} 
+2 & 3 & 4 \\
+0 & 1 & 2 \\
+5 & 6 & 7 \end{array} \right)$
+calcola la loro distanza secondo la norma $\|.\|_1$.**
+
+  - La norma di Manhattan per matrici si calcola come la massima somma degli elementi
+ (presi in valore assoluto) di una colonna.
+ - La distanza si calcola con la norma della differenza, quindi:
+ - $\left( \begin{array}{ccc} 
+-1 & -1 & -1 \\
+4 & 4 & 4 \\
+2 & 2 & 2 \end{array} \right)$
+ - Quindi la soluzione è *7*.
+ 
+ 
+**31. Date le 2 matrici $3\times3$
+$\left( \begin{array}{ccc} 
+1 & 0 & 0 \\
+0 & 5 & 0 \\
+0 & 0 & 9 \end{array} \right)$
+e
+$\left( \begin{array}{ccc} 
+2 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 7 \end{array} \right)$
+calcola la loro distanza secondo la norma $\|.\|_2$.**
+
+ - La norma euclidea per matrici si calcola con $\rho(\sqrt{A^T A})$.
+ - La distanza si calcola con la norma della differenza, quindi:
+ - $\left( \begin{array}{ccc} 
+-1 & 0 & 0 \\
+0 & 4 & 0 \\
+0 & 0 & 2 \end{array} \right)$
+ - Ora svolgiamo il prodotto $A^T A$, essendo A una matrice diagonale il prodotto si riduce al quadrato di ogni membro (considera che A^T^ = A).
+ - $\left( \begin{array}{ccc} 
+1 & 0 & 0 \\
+0 & 16 & 0 \\
+0 & 0 & 4 \end{array} \right)$
+ - In una matrice diagonale, gli elementi della diagonale sono i suoi autovalori, quindi $\rho(\sqrt{A^T A}) = 4$.
+
+**32. Data la matrice $3\times3$
+$\left( \begin{array}{ccc} 
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \end{array} \right)$
+trova una matrice B la cui distanza da A è 1 secondo la norma $\|.\|_1$**
+
+ - $\left( \begin{array}{ccc} 
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 10 \end{array} \right)$
+
+**33. Data la matrice $3\times3$
+$\left( \begin{array}{ccc} 
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \end{array} \right)$
+trova una matrice B la cui distanza da A è 1 secondo la norma $\|.\|_\infty$**
+
+ - $\left( \begin{array}{ccc} 
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 10 \end{array} \right)$
 
 
-  7 8 9  
-  5 6 7  
-calcola la loro distanza secondo la norma || || 1
-31. Date le 2 matrici 3x3
- 1 0 0 
- 2 0 0 
- 0 5 0 
- 0 1 0 
+**34. Dai due esempi di norme per lo spazio C[a,b] di tutte le funzioni continue in [a,b]**
 
-
-
-
-  0 0 9  
-  0 0 7  
-calcola la loro distanza secondo la norma euclidea || || 2
-32. Data la matrice 3x3
- 1 2 3 
- 4 5 6 
-
-
-  7 8 9  
-trova una matrice B la cui distanza da A è 1 secondo la norma || || 1
-33. Data la matrice 3x3
- 1 2 3 
- 4 5 6 
-
-
-  7 8 9  
-trova una matrice B la cui distanza da A è 1 secondo la norma || || 
-34. Dai due esempi di norme per lo spazio C[a,b] di tutte le funzioni continue in [a,b]
-35. Data la funzione y(x)=sen(x), trova due funzioni continue in [-2, 2] la cui distanza
-da y è uguale a 4 secondo la norma del massimo per funzioni.
-36. Considera le funzioni y 1 (x)=1.5x e y 2 (x)=x definite nell’intervallo [0,1]. Quale è la
+ - $\|f\|_\infty = sup|f(x)|$
+ - $\|f\|_1 = \int|f(x)dx$
+ 
+ 
+**35. Data la funzione *y(x)=sen(x)*, trova due funzioni continue in $[-2\pi, 2\pi]$ la
+ cui distanza da *y* è uguale a 4 secondo la norma del massimo per funzioni.**
+ 
+ - *y = 5sen(x)*
+ - *y = $\frac{4}{2\pi}x$*
+ 
+ 
+**36. Considera le funzioni *y~1~(x)=1.5x* e *y~2~(x)=x* definite nell’intervallo [0,1]. Quale è la
 distanza tra le due funzioni se si considera come distanza quella associata alla norma
-di funzione || f ||  max | f ( x ) | .
-[ 0 , 1 ]
-37. Considera le funzioni y 1 (x)=1.5x e y 2 (x)=x definite nell’intervallo [0,1]. Quale è la
+di funzione $ \|f\| = max_{[0,1]} |f(x)|$?**
+
+ - 0.5
+
+
+**37. Considera le funzioni y~1~(x)=1.5x e y~2~(x)=x definite nell’intervallo [0,1]. Quale è la
 distanza tra le due funzioni se si considera come distanza quella associata alla norma
-1
-di funzione || f ||  ( f ( x ) 2 dx ) 0 . 5 .
-0
-38. Cosa significa dire che una norma di una matrice nn è consistente o compatibile con
-una norma di vettore in $\mathbb{R}$n .
-39. Come si definisce una norma matriciale naturale.
-40. Quanto vale la norma della matrice identità nn se la norma è naturale. Giustifica la
-risposta.
-41. Fornisci un esempio di norma non naturale di matrice.
+di funzione $\|f\| = \left(\int_0^1f(x)^2dx\right)^\frac{1}{2}$?**
+
+**38. Cosa significa dire che una norma di una matrice $n\times n$ è consistente o compatibile con una norma di vettore in $\mathbb{R}^n$?**
+
+ - Significa che la norma vettoriale di Ax è minore uguale del prodotto
+ tra la norma matriciale di A e la norma vettoriale di x.
+ - $\|Ax\|_v\le\|A\|_M\|x\|_v$
+
+
+**39. Come si definisce una norma matriciale naturale?**
+
+ - $\|A\|_M \equiv \sup_{x\ne0}\frac{\|Ax\|}{\|x\|}=\max_{\|x\|=1}\|Ax\|$
+
+
+**40. Quanto vale la norma della matrice identità $n\times n$ se la norma è naturale? Giustifica larisposta.**
+
+ - Vale *1*. Poiché Ix = x, dalla definizione di norma naturale $\|I\| = \max_{\|x\|=1}\|Ix\|$, ma $\|x\|=1$, quindi anche $\|Ix\|=1$
+
+
+**41. Fornisci un esempio di norma non naturale di matrice.**
+
+ - Norma di Frobenius: $\sqrt{\sum_{i=1}^{m}\sum_{j=1}^{n}|a_{i,j}|}$
+ 
+ 
 42. Dati A, matrice nn e x vettore in $\mathbb{R}$n , verifica che per una norma naturale si ha
 || Ax ||  || A || || x || .
 243. Determina la norma di matrice indotta dalla norma di vettore || x ||  max | x i |  (con
@@ -266,6 +376,7 @@ chiuso in X.
 58. Dai un esempio di prodotto scalare definito nello spazio C[a,b] di tutte le funzioni
 continue in [a,b].
 59. Come si può ottenere una norma se si dispone di un prodotto scalare.
+$\iffalse$
 60. Verifica la proprietà di Cauchy-Schwartz nello spazio vettoriale $\mathbb{R}$^2^ .
 61. Come si definisce l’angolo tra due elementi di uno spazio lineare dotato di prodotto
 scalare.

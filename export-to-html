@@ -1,2 +1,2 @@
 #!/bin/bash
-pandoc -s CSMN-domande-risposte.md -o Risposte.html --to=HTML5
+pandoc -s CSMN-domande-risposte.md -o Risposte.html --to=HTML5 --mathjax
